@@ -206,7 +206,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        python-version: ['3.9', '3.10', '3.11', '3.12', '3.13', '3.14']
+        python-version: ['3.10', '3.11', '3.12', '3.13', '3.14']
         kind: [serial, other, dml, main, treatment, ray]
         exclude:
           # Serial tests fail randomly on mac sometimes, so we don't run them there
@@ -318,7 +318,7 @@ jobs:
       matrix:
         kind: [tests]
         os: [ubuntu-latest, windows-latest, macos-latest]
-        python-version: ['3.9', '3.10', '3.11', '3.12', '3.13', '3.14']
+        python-version: ['3.10', '3.11', '3.12', '3.13', '3.14']
         include:
           # assign extras to all combinations
           - extras: "[plt,dowhy,ray]"
